@@ -1,0 +1,1328 @@
+{
+  "info": {
+    "_postman_id": "07ce004a-4a67-47fe-a593-669d3422763d",
+    "name": "web3sphere",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46464673",
+    "_collection_link": "https://go.postman.co/collection/46464673-07ce004a-4a67-47fe-a593-669d3422763d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "create user",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"manikgupta12@gmail.com\",\n    \"password\": \"Manik@123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/signup",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "signup"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "SUCCESS",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"manikgupta99@gmail.com\",\n    \"password\": \"Manik@123\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/signup",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Ratelimit-Limit",
+                  "value": "5"
+                },
+                {
+                  "key": "X-Ratelimit-Remaining",
+                  "value": "3"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "4e5e1652-47d7-478d-920c-e0312461b15d"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 25 Jul 2026 06:44:43 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "104"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Registration successful. Please check your email for the verification code.\"\n}"
+            },
+            {
+              "name": "ALREADY EXISTS",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"manikgupta99@gmail.com\",\n    \"password\": \"Manik@123\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/signup",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Ratelimit-Limit",
+                  "value": "5"
+                },
+                {
+                  "key": "X-Ratelimit-Remaining",
+                  "value": "4"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "c2126fee-1cf3-4d96-844f-301a9cf08bac"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 25 Jul 2026 06:45:02 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "91"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"User with this email already exists\",\n    \"errors\": \"ALREADY_EXISTS\"\n}"
+            },
+            {
+              "name": "VALIDATION ERROR",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"manikgupta@gmail.com\",\n    \"password\": \"Manik@123\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/signup",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity",
+              "code": 422,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Ratelimit-Limit",
+                  "value": "5"
+                },
+                {
+                  "key": "X-Ratelimit-Remaining",
+                  "value": "3"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "c0eb977b-8efc-40fc-b6fc-6e145385dfda"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 25 Jul 2026 07:24:27 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "200"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Validation failed\",\n    \"errors\": {\n        \"email\": \"Invalid email address\",\n        \"password\": \"Password must contain at least 8 characters, uppercase, lowercase, number, and special character\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "login user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"manikgupta12@gmail.com\",\n    \"password\": \"Manik@123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "SUCCESS",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"manikgupta12@gmail.com\",\n    \"password\": \"Manik@123\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Ratelimit-Limit",
+                  "value": "5"
+                },
+                {
+                  "key": "X-Ratelimit-Remaining",
+                  "value": "4"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "e34c8d76-037f-42c4-b1df-14f47e805419"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 25 Jul 2026 07:25:56 GMT"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"c75c04d5-e8c4-4d54-aca1-e92e510a2102\",\n            \"email\": \"manikgupta12@gmail.com\",\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"role\": \"user\",\n            \"email_verified\": false,\n            \"avatar\": \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0 0 762 762\\\" fill=\\\"none\\\" shape-rendering=\\\"auto\\\" aria-hidden=\\\"true\\\"><!-- Generated by DiceBear (https://dicebear.com) --><metadata xmlns:rdf=\\\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\" xmlns:dc=\\\"http://purl.org/dc/elements/1.1/\\\" xmlns:dcterms=\\\"http://purl.org/dc/terms/\\\"><rdf:RDF><rdf:Description><dc:title>Adventurer</dc:title><dc:creator>Lisa Wischofsky</dc:creator><dc:source xsi:type=\\\"dcterms:URI\\\">https://www.figma.com/community/file/1184595184137881796</dc:source><dcterms:license xsi:type=\\\"dcterms:URI\\\">https://creativecommons.org/licenses/by/4.0/</dcterms:license><dc:rights>Remix of “Adventurer” (https://www.figma.com/community/file/1184595184137881796) by “Lisa Wischofsky”, licensed under “CC BY 4.0” (https://creativecommons.org/licenses/by/4.0/)</dc:rights></rdf:Description></rdf:RDF></metadata><defs><g id=\\\"head-default-fab87d6c\\\"><path d=\\\"M252.8 2a225 225 0 0 1 104.8 42.3c6.2 4.9 12.5 9.4 18 15a225 225 0 0 1 71.8 149 58.5 58.5 0 0 1 50.9 42.2 71 71 0 0 1-27.7 76.5 64 64 0 0 1-37.8 11.7c-5.1 0-10-1.6-15.1-1.8q-2.7 3.5-4.8 7.3a223 223 0 0 1-167.1 102.7c-11 .7-21.9 2-33 .7A223.7 223.7 0 0 1 34 105.3 223 223 0 0 1 208.8.6a216 216 0 0 1 44 1.3\\\" fill=\\\"black\\\"/><path fill-rule=\\\"evenodd\\\" clip-rule=\\\"evenodd\\\" d=\\\"M355.6 50.3A216 216 0 0 0 219.8 6.2a197 197 0 0 0-39 4A218 218 0 0 0 67.2 375.8 218.5 218.5 0 0 0 327.6 416c35-18.8 64.3-47.3 84.4-81.5l-3-1.6q-4.4-2-8-5c-2.2-2-.3-5.8 2.7-4.7q2.3 1.1 4.4 2.4 2.2 1.6 4.7 2.6a55 55 0 0 0 54.9-6.2 64.5 64.5 0 0 0 25-69.8 53 53 0 0 0-24-31c-13.4-8-30-9-44.7-3.7l-2.3 1c-1.6.7-3.4 1.4-5 1.2-2.5-.2-2.8-4.2-.6-5.2 8-4 16.5-5.6 25.4-6.4A217 217 0 0 0 373 65l-3.6-3.3c-4.3-4-8.6-8.1-13.8-11.3m107.6 196.2c2-1.2 1.3-5.1-1.4-5-2 0-4.2.8-6.2 1.6l-1.4.5a95 95 0 0 0-25.5 12.3c-2.2 2-2.2 4.4.1 6.2l5.2 2.8a36 36 0 0 1 13 9.3c-.2 1.8-2 3.3-3.4 4.4l-.2.2c-3.9 3-8.8 5-13.6 7l-7.2 3.1c-1.6.8-2.5 2.2-1.5 3.9 1 2 3.2 1.1 5 .5l.6-.2 5.4-2.3c5.4-2.3 11-4.5 15.4-8 2.7-2.1 5.1-5.1 5.4-8.7-.5-3.4-2.7-5.7-5.3-7.8-3.5-2.8-7.7-5-11.6-7.2l-1.1-.6q8-4.5 16.7-7.7l4.8-1.7a52 52 0 0 0 6.8-2.6\\\" fill=\\\"#f2d3b1\\\"/></g><g id=\\\"eyes-variant21-fab87d6c\\\"><path d=\\\"M64.5 24a55 55 0 0 1 61 45.5 55 55 0 1 1-61-45.5\\\" fill=\\\"black\\\"/><path d=\\\"M62.5 30a49.4 49.4 0 0 1 57 58.3 49.3 49.3 0 1 1-57-58.2\\\" fill=\\\"white\\\"/><path d=\\\"M274.3 51.7c13-.6 27-1.3 39.8 1.5 2.2.6 3 1.3 2.3 3.7-2 1.7-6 3.3-6.8 6 0 6 9 6 9.7 10.9-.3 3-2.4 3.3-5 3.1q-11.5-1-23-1.4c-16 0-32-.2-48 .9-7.6.7-15.2.6-22.8 1.2-11 1-22.1 1.3-33.1 3.3q-4.1 1-8.2 1c-2-1.2-3.1-5.5-.6-6.8 5.3-3 11.3-5 17.2-6.8 15-5 30.7-8.3 46.2-11.7 10.7-2.4 21.5-3.7 32.3-4.9M89.7 56.5q5.3-1.4 10.4-.2A20.2 20.2 0 0 1 94.3 96a20.1 20.1 0 0 1-4.5-39.5\\\" fill=\\\"black\\\"/></g><g id=\\\"eyebrows-variant09-fab87d6c\\\"><path d=\\\"M81.4 21.6c6.8.2 14.2 2.9 18 9 1 1.4.6 3.6.7 5.3-6.3.2-12.5.4-18.7 1.9a112 112 0 0 0-41.6 20.1 90 90 0 0 0-22 23c-1.4 2.3-2.4 5.1-4.2 7l-3.9.3q-.2-2.7.2-5.2A89 89 0 0 1 48 32.2a65 65 0 0 1 33.4-10.6m181.5 38.6a71 71 0 0 1 30 10l-.2 4.7c-4 1.6-7.3-.1-11.3-.8-6.8-1.2-14-1.2-20.9-1a198 198 0 0 0-84 23.7l-4.3 1.5c-2.6-5.4-3.7-11-.2-16.2a48 48 0 0 1 23.7-15.4c21.3-7.4 44.8-9 67.2-6.5\\\" fill=\\\"black\\\"/></g><g id=\\\"mouth-variant29-fab87d6c\\\"><path d=\\\"M124.4 18.2c1.5.3 2.8 1.6 2.7 3.2-7 16.8-15 33.2-25.1 48.4-4.7 7-9.2 14.2-14.5 20.7-2.2 3.2-8 2.9-10.8.7q-10.4-7.6-19.1-16.9c-9.2-10.4-18-20.1-24.7-32.4-.8-1.9-2.3-4-.8-5.9.6-1.2 3-.8 3.6.2Q43.5 50 54.2 61.7A154 154 0 0 0 76.9 84q1.7 1.4 3.7 2c2.7.4 4-1.2 5.4-3.1 13.5-19 25.7-38.8 34.6-60.4.9-2 1.5-3.7 3.8-4.3\\\" fill=\\\"black\\\"/></g><g id=\\\"hair-long19-fab87d6c\\\"><path d=\\\"M659.5 150.5a95 95 0 0 1 29 52c5.3 43 5.3 86 11.8 128.9 4.5 31.8 10.7 66.1 25.5 94.9 10.3 20.5 21.8 40.5 31.8 61.1a145 145 0 0 1 14.8 57 214 214 0 0 1-.6 34.9 129 129 0 0 1-17.5 51.8c-7.5 12.3-19 21.4-30.6 29.5-1.3.8-2.5 2.9-4.1 2.6-2 0-3-2-2.5-3.8a95 95 0 0 0 6.5-69.1c-.3-1-.4-2.1-1.4-2.7-4.6 25.3-15 49.9-31.4 69.9-13.2 16-30 28.9-50.2 34.6a74 74 0 0 1-47-1.7c-1.6-1.7-4.5-3.3-3.3-6a68 68 0 0 0 16.8-32c-1.8.6-3.3 1.7-5 2.4a68 68 0 0 1-29.5 5.9c-9 0-19.3-2-26.3-8-1.8-1.6-4-3.2-3.3-5.9a69 69 0 0 0 12.8-32.3q1.3-1.2 2.8-2.1c26-18.2 47.3-42.2 63.4-69.5 1.1-2.3 3.5-2.8 5.7-2a55 55 0 0 0 41.3-4 65 65 0 0 0 34.4-65.5 55 55 0 0 0-19.8-36 50 50 0 0 0-55-6 123 123 0 0 1-4.6 32.1 123 123 0 0 1-35 58.3c-1.3 1-2.7 2.6-4.4 3.1-1.3.1-3.5-.9-3.5-2.5-.3-1.9 1.7-3.3 2.7-4.8a77 77 0 0 0 10-21.2c4.3-14 6-29.3 6.1-44-.3-26-5-52.4-16-76.1-.6-1.8-1.8-3.9-1-5.8q3-7.6 3.2-15.6-6.6 4-13.4 7.6c-2.2 1.2-5.4 2.1-7.3 0-1.1-3.4-1-7.5-.7-11q.6-9.1 0-18.2c-6.9 3.7-13.3 7.5-20.6 10.4-2.5 1-5.3 0-7.7-.9a84 84 0 0 1-29.2-23c-4.7-5.3-9-10.6-11.8-17.3q-3.7-9-3.7-18.6c-13.7 7.3-31 6.1-46.1 6.2-16 .3-32.2-.8-48 1.1-1.8.2-4.8-.8-4.9-2.9-.5-2.8 1.8-4.6 3.5-6.5-13.2 3.6-26.1 8.7-39 13-3.6.9-7 2.6-10.4.4-3.5-2.5-2.6-6.2-2.3-10-3 0-6 1.4-8.8 2.3a722 722 0 0 1-41 14.3c-9.5 2.9-19 5-29.1 4.8q-7.4-.2-14 3a62 62 0 0 1-44.1-15 41 41 0 0 1-13-24.2 46 46 0 0 1 2-20 70 70 0 0 1 34.4-37.7c1.6-.8 3.9-2.4 5.7-1.3 1.7 1 2 3.3 1 5a50 50 0 0 0-5.8 57.8c4.4 7.3 10.9 14.2 19.5 16a89 89 0 0 1 20.5-40.6 206 206 0 0 1 49.4-41.6 297 297 0 0 1 114.9-41.3 176 176 0 0 1 66.5 2.7c17-22.2 42.4-37.3 70-41.7 30.7-5.4 63.9 3.6 86.9 24.8\\\" fill=\\\"black\\\"/><g fill=\\\"#b9a05f\\\"><path d=\\\"M585.6 130.3a95 95 0 0 1 75.2 29.9 89 89 0 0 1 21.6 42.3c.6 7 2 13.8 2.3 20.8 1.2 9.7 1.3 19.4 2.4 29.1q1.8 34 5.7 68c4 29 8 57.1 17.7 85 5.7 16.7 14 31.4 22.2 46.9 7.8 14.9 16.1 29.7 22.9 45.1 11.9 27.4 13.5 58.6 9.4 87.9a113 113 0 0 1-22.5 52c-4.5 5-9.7 9.9-15.2 13.7 4.4-12.3 6.3-25.6 5.7-38.6-.3-12.7-3.2-26-9.2-37.2-1.2-2.3-5.1-2-5.7.6a151 151 0 0 1-36.2 83 90 90 0 0 1-52.4 29.7 66 66 0 0 1-32.2-3c8.3-10.9 15.8-25.2 15.7-39.1.2-2.8-3.4-3.3-5.1-1.8a54 54 0 0 1-19.3 8.6 53 53 0 0 1-34.5-2.3c-1.2-.8-3.7-1.9-4.2-3.2a85 85 0 0 0 11.5-29.8c1.5-2 4.1-3 6-4.7a226 226 0 0 0 59-66.2c4.7.4 9.3 1.8 14.2 1.9a66 66 0 0 0 55-27.5 73 73 0 0 0 14.1-39 63 63 0 0 0-20.9-50 55 55 0 0 0 6.6-19 160 160 0 0 0-4.4-60 215 215 0 0 0-21-53.1 177 177 0 0 0-15.8-43.5 138 138 0 0 0-55.4-56.6q-1.8-1-3.8-1.1a59 59 0 0 0-44.4-24.4c-5-.8-9.9 0-14.9 0-3.3-2.4-7-3.1-11-3.4-6.1-.5-11 1.8-16.6-1.5a105 105 0 0 1 77.5-39.5\\\"/><path d=\\\"M498.6 172.4c1 .4 2.3.3 2.9 1.4q-3.6 1-7 2.3a320 320 0 0 0-75.1 33.9q-12.4 7.5-23.5 16.7c-1.5 1.3-1.6 3.4-.5 5q2.2 1.3 4.1-.4a254 254 0 0 1 46.6-29.4 269 269 0 0 1 61.6-23c6.4-1 13.6-2.5 20-1.3 2.2.4 4.2 1.7 6.4 2.4 3 1.2 6.2.2 9.5.3q6.6-.1 13 1.1a53 53 0 0 1 32 19 92 92 0 0 1 17.3 44.1q1.7 11.5 1.6 22.9c0 2.2 0 5.7 3 5.5 2.2 0 3-1.6 3-3.5 0-21.1-3-41.8-12.4-61a127 127 0 0 1 36.4 33 156 156 0 0 1 27.8 66 255 255 0 0 1 1 78c-.5 3.3-1.3 6.8-1.1 10.1 1.3 3 5.2 2.3 5.5-1q2.5-13.3 3.2-27.1c1.6-16.3.9-32.1-.8-48.3.3 2 1.4 3.6 2.2 5.4a202 202 0 0 1 15.4 67.9c.3 11.7-.6 25.3-6.3 35.8a57 57 0 0 0-56-5.3c-.6-1.6-.5-4.2-2.8-4.4-1.7-.3-3.4 1-3.3 2.9.3 6.6.5 13.4-.2 20a131 131 0 0 1-22.6 58l-1 .5q.4-2.9 1.4-5.5c5-16.7 6.3-34.2 5.8-51.5-1.2-25-6.5-50.6-17.4-73.2 2.4-6 3-12 3.8-18.3.1-2 .5-4.1 0-6.1-1.2-2.4-4.1-1.8-5.7-.1q-5 4.3-10.9 7c-1.6.8-3.2 2.2-5 2.2 0-3.6.4-7.3.2-11 0-5.8.5-12.3-1-18-2.5-2.2-5-1-7.2.9q-9.3 5.3-19 9.6c-1.8.8-3.4.2-5-.4a78 78 0 0 1-24.8-19.2 65 65 0 0 1-13.4-19.4 40 40 0 0 1 2-33c1-1.6.5-4.1-1.7-4.4-2.7-.6-4 3-5 4.9-2 4.5-4 10.9-8.4 13.6-9.6 4-19.4 4.3-29.6 4.2h-48l-7.8.8c2-3 5.3-5 3.1-8.9-3.2-2-6.4-.7-9.8-.1-13.2 3.5-26 8.6-39 13-2 .6-4 1.4-6 1 .1-2.8 1.3-6.7-1-9-2-2.3-4.7-2-7.5-1.5-7 1.8-13.2 4.6-20 7-12.9 4.5-25.9 9.3-39.2 12.5-7.5 1.7-15.1 1.9-22.8 2-3.7 0-6.3 2.6-10 2.4a54 54 0 0 1-26-5 39 39 0 0 1-21.5-22.2 37 37 0 0 1 1.1-27 62 62 0 0 1 22-26.3c-1.6 4-3.3 7.8-4.3 12-4.5 19 .4 40.7 15.1 54.1 5.2 3.6 10 7 16.6 7.1q3.5-.1 4.2-3.5c3.4-20.6 18-39.2 32.8-53.2a266 266 0 0 1 93-53.9q19.6-6.6 40-10.7c24.7-4.5 51.4-6.2 76-.4\\\"/></g></g><clipPath id=\\\"clip-fab87d6c\\\"><rect width=\\\"762\\\" height=\\\"762\\\" rx=\\\"0\\\" ry=\\\"0\\\"/></clipPath></defs><g clip-path=\\\"url(#clip-fab87d6c)\\\"><use transform=\\\"translate(143.2 162.9)\\\" href=\\\"#head-default-fab87d6c\\\"/><use transform=\\\"translate(154.7 340.2)\\\" href=\\\"#eyes-variant21-fab87d6c\\\"/><use transform=\\\"translate(154.6 268.5)\\\" href=\\\"#eyebrows-variant09-fab87d6c\\\"/><use transform=\\\"translate(232.5 456.6)\\\" href=\\\"#mouth-variant29-fab87d6c\\\"/><use transform=\\\"translate(-65.6 -47.4)\\\" href=\\\"#hair-long19-fab87d6c\\\"/></g></svg>\"\n        },\n        \"tokens\": {\n            \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzc1YzA0ZDUtZThjNC00ZDU0LWFjYTEtZTkyZTUxMGEyMTAyIiwiZW1haWwiOiJtYW5pa2d1cHRhMTJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiaXNzIjoid2ViM3NwaGVyZSIsImV4cCI6MTc4NDk2NTI1NiwiaWF0IjoxNzg0OTY0MzU2LCJqdGkiOiIzMjE3ZTI1NC1hMjI2LTQzZjItYWRhOC1iMTJjYTQzNTQ4NGIifQ.anEs-5n186q8Uj-duW_lfzWD0EncjT2X5UfgzPZYzMM\",\n            \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzc1YzA0ZDUtZThjNC00ZDU0LWFjYTEtZTkyZTUxMGEyMTAyIiwiZW1haWwiOiJtYW5pa2d1cHRhMTJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImlzcyI6IndlYjNzcGhlcmUiLCJleHAiOjE3ODU1NjkxNTYsImlhdCI6MTc4NDk2NDM1NiwianRpIjoiNzZmNjdkNmMtMjBkZC00YmZmLWExNWYtZGRjOGZlYTM0MTlkIn0.4XuMdaDtPQNn4r7zkWKeeDUMyzoucSjXUutgNXlE_aQ\",\n            \"expires_in\": 900\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "forgot password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"manikgupta717@gmail.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/forgot-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "forgot-password"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "SUCCESS",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"manikgupta717@gmail.com\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/forgot-password",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "forgot-password"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Ratelimit-Limit",
+                  "value": "5"
+                },
+                {
+                  "key": "X-Ratelimit-Remaining",
+                  "value": "4"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "e40ed496-7ab1-45d1-a3d5-e939e0e5a401"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 27 Jul 2026 19:45:03 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "97"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"If your email is registered, you will receive a password reset code.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Resend Otp",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"manikgupta717@gmail.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/resend-otp",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "resend-otp"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Resend Otp",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"manikgupta717@gmail.com\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/resend-otp",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "resend-otp"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Ratelimit-Limit",
+                  "value": "5"
+                },
+                {
+                  "key": "X-Ratelimit-Remaining",
+                  "value": "3"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "4a6c5a4c-3ec7-4900-a339-22257cdc4dd3"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 27 Jul 2026 19:34:26 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "66"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"A new verification code has been sent\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "verify email",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"manikgupta71@gmail.com\",\n    \"otp\": \"306095\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/verify-email",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "verify-email"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "SUCCESS",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"manikgupta71@gmail.com\",\n    \"otp\": \"306095\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/verify-email",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "verify-email"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Ratelimit-Limit",
+                  "value": "5"
+                },
+                {
+                  "key": "X-Ratelimit-Remaining",
+                  "value": "3"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "efa71477-7752-4ea5-b1cc-3bab27f92a3b"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 27 Jul 2026 19:14:13 GMT"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Email verified successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"3e884630-1b23-4846-a2b5-3f47ed78732f\",\n            \"email\": \"manikgupta71@gmail.com\",\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"role\": \"user\",\n            \"email_verified\": true,\n            \"avatar\": \"<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0 0 762 762\\\" fill=\\\"none\\\" shape-rendering=\\\"auto\\\" aria-hidden=\\\"true\\\"><!-- Generated by DiceBear (https://dicebear.com) --><metadata xmlns:rdf=\\\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\" xmlns:dc=\\\"http://purl.org/dc/elements/1.1/\\\" xmlns:dcterms=\\\"http://purl.org/dc/terms/\\\"><rdf:RDF><rdf:Description><dc:title>Adventurer</dc:title><dc:creator>Lisa Wischofsky</dc:creator><dc:source xsi:type=\\\"dcterms:URI\\\">https://www.figma.com/community/file/1184595184137881796</dc:source><dcterms:license xsi:type=\\\"dcterms:URI\\\">https://creativecommons.org/licenses/by/4.0/</dcterms:license><dc:rights>Remix of “Adventurer” (https://www.figma.com/community/file/1184595184137881796) by “Lisa Wischofsky”, licensed under “CC BY 4.0” (https://creativecommons.org/licenses/by/4.0/)</dc:rights></rdf:Description></rdf:RDF></metadata><defs><g id=\\\"head-default-a9e8ccaf\\\"><path d=\\\"M252.8 2a225 225 0 0 1 104.8 42.3c6.2 4.9 12.5 9.4 18 15a225 225 0 0 1 71.8 149 58.5 58.5 0 0 1 50.9 42.2 71 71 0 0 1-27.7 76.5 64 64 0 0 1-37.8 11.7c-5.1 0-10-1.6-15.1-1.8q-2.7 3.5-4.8 7.3a223 223 0 0 1-167.1 102.7c-11 .7-21.9 2-33 .7A223.7 223.7 0 0 1 34 105.3 223 223 0 0 1 208.8.6a216 216 0 0 1 44 1.3\\\" fill=\\\"black\\\"/><path fill-rule=\\\"evenodd\\\" clip-rule=\\\"evenodd\\\" d=\\\"M355.6 50.3A216 216 0 0 0 219.8 6.2a197 197 0 0 0-39 4A218 218 0 0 0 67.2 375.8 218.5 218.5 0 0 0 327.6 416c35-18.8 64.3-47.3 84.4-81.5l-3-1.6q-4.4-2-8-5c-2.2-2-.3-5.8 2.7-4.7q2.3 1.1 4.4 2.4 2.2 1.6 4.7 2.6a55 55 0 0 0 54.9-6.2 64.5 64.5 0 0 0 25-69.8 53 53 0 0 0-24-31c-13.4-8-30-9-44.7-3.7l-2.3 1c-1.6.7-3.4 1.4-5 1.2-2.5-.2-2.8-4.2-.6-5.2 8-4 16.5-5.6 25.4-6.4A217 217 0 0 0 373 65l-3.6-3.3c-4.3-4-8.6-8.1-13.8-11.3m107.6 196.2c2-1.2 1.3-5.1-1.4-5-2 0-4.2.8-6.2 1.6l-1.4.5a95 95 0 0 0-25.5 12.3c-2.2 2-2.2 4.4.1 6.2l5.2 2.8a36 36 0 0 1 13 9.3c-.2 1.8-2 3.3-3.4 4.4l-.2.2c-3.9 3-8.8 5-13.6 7l-7.2 3.1c-1.6.8-2.5 2.2-1.5 3.9 1 2 3.2 1.1 5 .5l.6-.2 5.4-2.3c5.4-2.3 11-4.5 15.4-8 2.7-2.1 5.1-5.1 5.4-8.7-.5-3.4-2.7-5.7-5.3-7.8-3.5-2.8-7.7-5-11.6-7.2l-1.1-.6q8-4.5 16.7-7.7l4.8-1.7a52 52 0 0 0 6.8-2.6\\\" fill=\\\"#f2d3b1\\\"/></g><g id=\\\"eyes-variant04-a9e8ccaf\\\"><path d=\\\"M60.3 24.7a55 55 0 0 1 63 35.8l8 .8-.7 3.7c-1.5 1.1-3.8 1.2-5.5 1.7a55 55 0 1 1-109 9L9 75.4c.3-1.3 0-3.8 1.3-4.6q3.2-.7 6.6-1a55 55 0 0 1 43.4-45M219.8 4.4a65 65 0 0 1 77.5 28.4c2.8 4.6 4.5 9.4 6.5 14.2 4.5-.5 8.8-.8 13.2.3-.6 1.5-.4 3.5-2 4.2-3.2.8-6.5.9-9.8 1.2q1.1 7 1.3 14.1a66 66 0 0 1-44.1 61A65.2 65.2 0 0 1 176 62.5c-3.3.3-6.6.8-10 .5-2.3-.4-1.9-2.6-2.5-4.4q6.3-1.5 13-2a66 66 0 0 1 43.3-52.1m-148.5 25a49 49 0 0 0-48.5 39.9l39.5-3.3c7.7-.1 15.3-1.5 23-1.7 10.7-.8 21.5-1.3 32.2-3-7.1-19-26-32.2-46.2-32m200-14.6a60 60 0 0 0-80 19 58 58 0 0 0-9 22.4c10.9-1.2 21.7-1.6 32.5-2.6 8.5-.8 17-.8 25.4-1.8q29-2 57.7-4.3a61 61 0 0 0-26.6-32.7\\\" fill=\\\"black\\\"/><path d=\\\"M299.4 53.2a59.8 59.8 0 0 1-67.2 71.8 59.7 59.7 0 0 1-50.7-63l8.3-.7a26 26 0 0 0 8.2 17.8A24.6 24.6 0 0 0 239 58l13.5-1.4c15.7-1 31.3-2.6 47-3.4M115.2 67.6l3.8-1a49.5 49.5 0 0 1-85.8 43.2A50 50 0 0 1 22 75.3c16.4-1.6 33-2.6 49.4-4.4.1 5.5 1.1 10.8 4.7 15.2a22 22 0 0 0 23.4 8c7-2.3 13-8 15-15.2 1.2-3.8.6-7.3.7-11.2\\\" fill=\\\"white\\\"/></g><g id=\\\"eyebrows-variant05-a9e8ccaf\\\"><path d=\\\"M207.6 32.9c6.2-.5 13-.6 18.5 3a10 10 0 0 1 4.4 10.6C229 52.8 224 57.6 219 61a68 68 0 0 1-30.6 11.6c-5.6.5-12.5.4-17.4-2.6a10 10 0 0 1-5.2-10.3c1-5.8 5.5-10.5 10-14 9.1-7 20.5-11.3 31.9-12.8M76.6 49.7a47 47 0 0 1 26.3 5.3c3.8 2.2 7.3 5.9 7.9 10.5.3 4.2-2 7.8-5.2 10.2-4.5 3.6-9.9 5-15.4 6-10 1-20.6.3-29.5-4.6-3.9-2.2-7.9-5.8-8.5-10.5-.7-4.3 2-8.5 5.4-10.9a36 36 0 0 1 19-6\\\" fill=\\\"black\\\"/></g><g id=\\\"mouth-variant29-a9e8ccaf\\\"><path d=\\\"M124.4 18.2c1.5.3 2.8 1.6 2.7 3.2-7 16.8-15 33.2-25.1 48.4-4.7 7-9.2 14.2-14.5 20.7-2.2 3.2-8 2.9-10.8.7q-10.4-7.6-19.1-16.9c-9.2-10.4-18-20.1-24.7-32.4-.8-1.9-2.3-4-.8-5.9.6-1.2 3-.8 3.6.2Q43.5 50 54.2 61.7A154 154 0 0 0 76.9 84q1.7 1.4 3.7 2c2.7.4 4-1.2 5.4-3.1 13.5-19 25.7-38.8 34.6-60.4.9-2 1.5-3.7 3.8-4.3\\\" fill=\\\"black\\\"/></g><g id=\\\"hair-short03-a9e8ccaf\\\"><path d=\\\"M434.7 87.2a70 70 0 0 1 42.1 26.5q13.2-8.1 27.8-12.2c12-3.5 24.7-4.2 37-2.8 15.4 2 30.6 9 40.1 21.6a47 47 0 0 1 9.3 31.1c6.5.8 12.9 1.4 19.1 3.3a63 63 0 0 1 34.4 22.9 42 42 0 0 1 7.6 30.8 71 71 0 0 1 61 9.5 54 54 0 0 1 19 23.3c4 10 4 21.4-.2 31.2a46 46 0 0 1-13 17.1 58 58 0 0 1 42.9 24.7c1.1 1.8 1.6 4-.1 5.6-1.7.4-3.5-.9-5-1.4-3.5-1.7-7-1.4-10.7-1.4a54 54 0 0 1 3.5 70.3 45 45 0 0 1-29.7 16.7 47 47 0 0 1-14 52.7c-1.7 1.3-4 2.7-5.5.2a57 57 0 0 0-26.4-27.3 30 30 0 0 1-6.4 11.7 37 37 0 0 1-55.1-3.7c-5-7-6-15.7-3-23.8a59 59 0 0 0-16.1 13.3c-2 2.4-3.6 2.2-6 .6a59 59 0 0 1-24.2-46.3 78 78 0 0 1 14.4-48.5c-15.4 2-30.2-8-35.3-22.4a48 48 0 0 1-24.6 7.3 52 52 0 0 1-30.2-9.2 85 85 0 0 1-28.4-33.1q-3.6 4.8-8 9.4a75 75 0 0 1-55.4 22.4c-13.3-.4-26-4.7-37-12.2a60 60 0 0 0 13.4 23c1.2 1.1 2 2.3 1.4 4a16 16 0 0 1-6.6 4.7 76 76 0 0 1-49.2 5.9 81 81 0 0 1-39.3-20.6c-8.3 12.7-23 18-37.7 17.4a279 279 0 0 0-18.4 49c-1.1 3.8-1.6 7.8-3.1 11.4-.8 1.8-2.7 2.3-4.5 1.6a35 35 0 0 1-19.7-20.4 52 52 0 0 1-2-33.4 37 37 0 0 1-29.1-11.5 61 61 0 0 1-15.4-40.8 78 78 0 0 1 13.9-46.3c1.5-1.8 2.6-4 5.4-3.3 1.9 1.2 1.4 3.6 2 5.6.6 4.4 3 8.3 5.2 12 5.4-15.5 18.6-29.3 35.8-30.3-.6-3.2-1.3-6.4-1.2-9.7a55 55 0 0 1 19.3-38.8 41 41 0 0 1 26-10.4c1.2-14.3 9-27.7 19-37.7a65 65 0 0 1 38.8-18.9c10-1 20.3 1.7 28.5 7.7 23.8-24 60.4-35.5 93.6-28.1M623 541c1.5-1 2.7-.4 4.1 0a81 81 0 0 0 16.5 2.2l7.1-.2c2 .9 2 2.5 2 4.4a33 33 0 0 1-5.3 17.7 27 27 0 0 1-16.8 11.4A26 26 0 0 1 609 571c-1.7-1.5-3.2-3.8-1.5-5.9q5.7-7.4 10.7-15.3c1.8-2.9 2.9-6.3 5-9\\\" fill=\\\"black\\\"/><path d=\\\"M423.4 91.1a70 70 0 0 1 44.1 20.4c2.5 2.5 4.3 5.7 6.7 8.2 1.8 1.3 3.4.4 5-.6a91 91 0 0 1 67.6-13.6 53 53 0 0 1 28.5 16.2 41 41 0 0 1 10 29.7c0 1.5-.4 3.5.3 4.9 1.1 1.2 2.4 1 4 1.2a69 69 0 0 1 38.7 12.2c9 6.4 16.2 15.6 18 26.7.4 5.5.8 11-1.6 16.2-.9 2.5 1.2 4.3 3.6 3.3a65 65 0 0 1 58.8 5c8.5 5.3 15.8 13 19.5 22.4 3.4 8 3.7 17.5.5 25.6a39 39 0 0 1-13 16.9c-2.5 1.9-5.4 3.4-7.7 5.6-1.4 1.6 0 4.5 2.2 4.3 5.4 0 10.6-.7 16 .4 10.8 2 20.2 7.9 27.8 15.7-3.7 0-8.7-.6-11.9 1.6-1.8 1.2-2.4 3.3-1 5.1 2.4 3.2 5.5 5.9 7.6 9.4 7.1 10.8 9 23.9 6.8 36.5a44 44 0 0 1-17.8 27.5c-6.4 4.2-13.7 7-21.5 6.1-2.2-.4-2.8 2.6-1.9 4.2a42 42 0 0 1-9.2 49.1 71 71 0 0 0-18.2-21.6c-3.3-2.6-7.2-4-10.7-6.3-1.5-3.8-.4-8.5-4.8-10.4l-2.8 1.3c.1 4 1.8 7.3 1.5 11.1-.3 6.4-4.2 12-9.4 15.5a32 32 0 0 1-39.4-3.6 20 20 0 0 1-5.7-18.7c.7-3.3 2.6-5.7 4.3-8.5 1-1.2 0-3-.4-4.4q-3 0-5.9 1c-8.4 3.3-16 9.1-22 15.8a52 52 0 0 1-19.7-30.3 72 72 0 0 1 16-61.2c1.3-1.8 2.6-3.3 1.3-5.5-1.5-2-4-.7-5.9 0-9.9 4.6-22.3-.1-29-8.1-3.5-4-5-8.6-6.8-13.5-2.2-.2-3.8-.4-5.8 1a42 42 0 0 1-23.5 7 48 48 0 0 1-29.2-10.3 84 84 0 0 1-25.7-34.2l-2.3-1.5q-2.2 1.5-3.6 3.7a68 68 0 0 1-58.2 31.7A59 59 0 0 1 359 288c-1.2-.9-2.6-2.1-4.3-1.4-2.2 1-2.5 3.8-2 6 1.9 10.2 7.2 20 13.7 28a72 72 0 0 1-66.7-.3 71 71 0 0 1-34-37 60 60 0 0 1-2.7-35.8c.4-1.9 1-3.6 0-5.4-1.9-1.1-3.8-1-4.8 1.1-7 22.7.5 47.3 15.9 64.7a33 33 0 0 1-23.5 15.2c-7.5.8-15.1.5-22.2-2.4-4.5-1.6-8.2-4.3-12.2-6.7-3-1.3-5.5 2.7-2.8 4.7 6 5.1 14 8.3 21.8 10q-13.5 27.2-20.7 56.6c-8-3.8-12.5-11.2-15.4-19.3a42 42 0 0 1-.3-27.3c.7-2.8 2.6-5-.3-7.2-4-.5-7.8 1.3-12 .3a34 34 0 0 1-23.9-16.3 62 62 0 0 1-7.9-40c1-10.5 4.8-21 10.3-30 1.8 5.3 4.6 11 8.9 14.8q2.2 1.9 4.9.4c1.1-2.4 1-5.4 2-8a39 39 0 0 1 23.3-22.5c4-1.4 7.5-.4 11.5-.6 1.2-.4 1.7-1.9 2.4-2.8-4.9-11.3-2.4-23.2 3.3-33.6a45 45 0 0 1 25.8-22c3.8-1.2 7.5-.5 11.4-1 2-.7 1.6-2.9 2-4.7 1.2-13.2 7.6-25 16.9-34.2a59 59 0 0 1 36.2-17.9 35 35 0 0 1 23.3 6.2 77 77 0 0 0-17.9 38c-.2 2.2 1.6 3.5 3.7 3.2 2.3-1.2 2-3.6 2.7-5.8a69 69 0 0 1 14.8-30 98 98 0 0 1 83.2-33.8m202.7 455.2q10.1 2 20.6 2.4a23 23 0 0 1-13.9 21 21 21 0 0 1-19.8-2.5c4.7-6.9 9.4-13.5 13.1-21\\\" fill=\\\"#cb6820\\\"/></g><clipPath id=\\\"clip-a9e8ccaf\\\"><rect width=\\\"762\\\" height=\\\"762\\\" rx=\\\"0\\\" ry=\\\"0\\\"/></clipPath></defs><g clip-path=\\\"url(#clip-a9e8ccaf)\\\"><use transform=\\\"translate(143.2 162.9)\\\" href=\\\"#head-default-a9e8ccaf\\\"/><use transform=\\\"translate(154.7 340.2)\\\" href=\\\"#eyes-variant04-a9e8ccaf\\\"/><use transform=\\\"translate(154.6 268.5)\\\" href=\\\"#eyebrows-variant05-a9e8ccaf\\\"/><use transform=\\\"translate(232.5 456.6)\\\" href=\\\"#mouth-variant29-a9e8ccaf\\\"/><use transform=\\\"translate(-65.6 -47.4)\\\" href=\\\"#hair-short03-a9e8ccaf\\\"/></g></svg>\"\n        },\n        \"tokens\": {\n            \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiM2U4ODQ2MzAtMWIyMy00ODQ2LWEyYjUtM2Y0N2VkNzg3MzJmIiwiZW1haWwiOiJtYW5pa2d1cHRhNzFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiaXNzIjoid2ViM3NwaGVyZSIsImV4cCI6MTc4NTE4MDU1MywiaWF0IjoxNzg1MTc5NjUzLCJqdGkiOiJlZDg3ZDQ3ZC0yOWIzLTRjMjYtOGE2ZS02MzUzMTE2ZDA4YjAifQ.l4Kp_rINkz-YO_xgLk5WzZnFhQLlQ7QG8du5CgnJjIw\",\n            \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiM2U4ODQ2MzAtMWIyMy00ODQ2LWEyYjUtM2Y0N2VkNzg3MzJmIiwiZW1haWwiOiJtYW5pa2d1cHRhNzFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImlzcyI6IndlYjNzcGhlcmUiLCJleHAiOjE3ODU3ODQ0NTMsImlhdCI6MTc4NTE3OTY1MywianRpIjoiOTgxNzE3ZjEtZDA4OS00YmYyLTlhYzktODA4NjBmZGRjZmY3In0.eRNRMwg2Aom3zElg5Iv8zqcLuOPGKbWKMf6tl7p3G_I\",\n            \"expires_in\": 900\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzc1YzA0ZDUtZThjNC00ZDU0LWFjYTEtZTkyZTUxMGEyMTAyIiwiZW1haWwiOiJtYW5pa2d1cHRhMTJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImlzcyI6IndlYjNzcGhlcmUiLCJleHAiOjE3ODU1Njk0MzMsImlhdCI6MTc4NDk2NDYzMywianRpIjoiNzA3MmNjYzEtZTBiNy00NDUyLThmOGQtZmM0OTFkYWY4MmNhIn0.sbCvu_-J1SAgHR8lCuKEyCLavf14EVLSp83K7jC5fow\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/refresh",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "refresh"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "SUCCESS",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzc1YzA0ZDUtZThjNC00ZDU0LWFjYTEtZTkyZTUxMGEyMTAyIiwiZW1haWwiOiJtYW5pa2d1cHRhMTJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImlzcyI6IndlYjNzcGhlcmUiLCJleHAiOjE3ODU1Njk0MzMsImlhdCI6MTc4NDk2NDYzMywianRpIjoiNzA3MmNjYzEtZTBiNy00NDUyLThmOGQtZmM0OTFkYWY4MmNhIn0.sbCvu_-J1SAgHR8lCuKEyCLavf14EVLSp83K7jC5fow\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/refresh",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "refresh"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "fd49ac03-03dd-4702-b9c0-2a80cf3eaea9"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 25 Jul 2026 07:30:53 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "850"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Token refreshed\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzc1YzA0ZDUtZThjNC00ZDU0LWFjYTEtZTkyZTUxMGEyMTAyIiwiZW1haWwiOiJtYW5pa2d1cHRhMTJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiaXNzIjoid2ViM3NwaGVyZSIsImV4cCI6MTc4NDk2NTU1MywiaWF0IjoxNzg0OTY0NjUzLCJqdGkiOiJmYWI3Njg1NC05MzE2LTQ1ZTItOWMxNi1hZThkNzRlMjMxYTUifQ.MRwyX4A_vRvEu8CxjZHQNny9EC9juBOGDtyXUR6jLnw\",\n        \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzc1YzA0ZDUtZThjNC00ZDU0LWFjYTEtZTkyZTUxMGEyMTAyIiwiZW1haWwiOiJtYW5pa2d1cHRhMTJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImlzcyI6IndlYjNzcGhlcmUiLCJleHAiOjE3ODU1Njk0NTMsImlhdCI6MTc4NDk2NDY1MywianRpIjoiZjk5NDgwZjEtOTUzNi00MGU3LWJmOTUtYzljYzRmMzMzMjY3In0.F5bg8Wsp7lsR2coi6eKNprtGVmm72vuPMQOl1vr-ue0\",\n        \"expires_in\": 900\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzc1YzA0ZDUtZThjNC00ZDU0LWFjYTEtZTkyZTUxMGEyMTAyIiwiZW1haWwiOiJtYW5pa2d1cHRhMTJAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiaXNzIjoid2ViM3NwaGVyZSIsImV4cCI6MTc4NDk2NTUwNywiaWF0IjoxNzg0OTY0NjA3LCJqdGkiOiJjM2JmNjI5Ny0zODAwLTQ4ZTQtYmE4Mi1kZTAzNzM3NDJkYjgifQ.BRiDwQL2m-soGG2WRNs6OMeW6__bLQqHj376pA_M_Jw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "// {\n//             \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzMyZjYzNzgtMDU4NC00MjNiLTkwMGUtN2E1MjQzMzFjYmM1IiwiZW1haWwiOiJtYW5pa2d1cHRhNzE3QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwidG9rZW5fdHlwZSI6InJlZnJlc2giLCJpc3MiOiJ3ZWIzc3BoZXJlIiwiZXhwIjoxNzg1NTIzODY5LCJpYXQiOjE3ODQ5MTkwNjksImp0aSI6ImE5YWZhMzhkLTkxZGQtNDIxZS05Y2RiLTUyYTBkNDYzNjNmMCJ9.52i7E6B3fv-pAwj-EpeyWjwwZPpLgIU3TMr8o7yS3vY\"\n// }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "SUCCESS",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/logout",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "logout"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "09ffdbf2-6af2-48c6-933e-88281b5ce742"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 25 Jul 2026 07:27:17 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "52"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Logged out successfully\"\n}"
+            },
+            {
+              "name": "INVALID",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/logout",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "logout"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "9a1a2884-0e3b-4abd-9345-6ea7cd64a7b7"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 25 Jul 2026 07:27:27 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "54"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Invalid or expired token\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"manikgupta717@gmail.com\",\n    \"otp\": \"543245\",\n    \"new_password\": \"ManikG@123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/reset-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "reset-password"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "SUCCESS",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"manikgupta717@gmail.com\",\n    \"otp\": \"543245\",\n    \"new_password\": \"ManikG@123\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/auth/reset-password",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "reset-password"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Permissions-Policy",
+                  "value": "camera=(), microphone=(), geolocation=()"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Api-Version",
+                  "value": "1.0.0"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "X-Ratelimit-Limit",
+                  "value": "5"
+                },
+                {
+                  "key": "X-Ratelimit-Remaining",
+                  "value": "4"
+                },
+                {
+                  "key": "X-Request-Id",
+                  "value": "46f8dff4-ea1c-47a3-9d70-eff2f17e5d19"
+                },
+                {
+                  "key": "X-Request-Timeout",
+                  "value": "30s"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 27 Jul 2026 19:52:35 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "56"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Password reset successfully\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
