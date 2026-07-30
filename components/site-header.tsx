@@ -11,8 +11,11 @@ import { authApi } from '@/lib/api/auth'
 
 const NAV = [
   { label: 'Community', href: '/#community' },
-  { label: 'Moats', href: '/#moats' },
+  { label: 'Explore', href: '/explore' },
+  { label: 'Learn', href: '/learn' },
   { label: 'Hire', href: '/hire' },
+  { label: 'Mentorship', href: '/mentorship' },
+  { label: 'Referral', href: '/referral' },
   { label: 'Payments', href: '/payments' },
 ]
 

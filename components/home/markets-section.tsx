@@ -14,22 +14,22 @@ export function MarketsSection() {
   const coins = (data?.coins ?? []).slice(0, 8)
 
   return (
-    <section id="markets" className="relative border-t border-border py-20 md:py-24">
+    <section id="markets" className="relative border-t border-border py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <span className="font-mono text-xs uppercase tracking-widest text-primary">Live markets</span>
+            <span className="font-mono text-xs uppercase tracking-widest text-primary">Markets · Signal · Intelligence</span>
             <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Real-time prices, powered by the community
+              Live market data fused with on-chain signal
             </h2>
             <p className="mt-3 max-w-xl text-pretty text-muted-foreground">
-              Track the market, rate exchanges, and follow whale wallets — all fused with AI sentiment and on-chain
-              data.
+              Transparent asset prices, DEX/CEX ratings, whale tracking, and AI sentiment — all refreshing live so you
+              never trade behind the curve.
             </p>
           </div>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card/50 px-3 py-1.5 font-mono text-xs text-muted-foreground">
             <RefreshCw className={cn('h-3 w-3', isLoading && 'animate-spin')} />
-            {data?.source === 'fallback' ? 'CACHED DATA' : 'LIVE · 60s'}
+            {data?.source === 'fallback' ? 'CACHED · No downtime' : 'LIVE · 60s'}
           </span>
         </div>
 

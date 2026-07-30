@@ -14,34 +14,48 @@ import {
   BarChart3,
   Cpu,
   Sparkles,
+  BookOpen,
+  Award,
+  Landmark,
+  Wallet,
 } from 'lucide-react'
 import { useMode } from '@/components/mode-provider'
 
 const WEB3_FEATURES = [
-  {
-    icon: Users,
-    title: 'Community Hub & Rooms',
-    desc: 'A global room plus coin-specific and mentorship rooms for focused, high-signal conversation.',
-  },
   {
     icon: Fingerprint,
     title: 'On-Chain Identity',
     desc: 'Profiles backed by wallets, NFTs, SBTs, and POAPs — a verifiable reputation you truly own.',
   },
   {
-    icon: Search,
-    title: 'Wallet Lookup',
-    desc: 'Search any address and instantly see the human behind it: activity, holdings, and trust badge.',
+    icon: BookOpen,
+    title: 'Learn · Courses & Badges',
+    desc: 'Take expert courses in SCs, ZK, DeFi, Agents. Mint completion NFTs that boost your Builder Score.',
   },
   {
-    icon: MessagesSquare,
-    title: 'Q&A Forum',
-    desc: 'StackOverflow-style questions with on-chain tips, XP, and badges for helpful answers.',
+    icon: Wallet,
+    title: 'Fiat & Crypto Payments',
+    desc: 'INR deposits via UPI/NEFT/RTGS, instant P2P crypto by username, escrow, and splits — all in one wallet.',
+  },
+  {
+    icon: Users,
+    title: 'Community Hub & Rooms',
+    desc: 'Global, coin-specific, and mentorship rooms for focused, high-signal conversation with builders.',
+  },
+  {
+    icon: Search,
+    title: 'Wallet Lookup & Explore',
+    desc: 'Search any address to see the human behind it: activity, holdings, badges, and trust score.',
   },
   {
     icon: Trophy,
-    title: 'Gamified Reputation',
+    title: 'Builder Score · XP · Reputation',
     desc: 'Earn XP, soulbound achievements, and DAO badges that travel with your wallet everywhere.',
+  },
+  {
+    icon: MessagesSquare,
+    title: 'Q&A Forum with Bounties',
+    desc: 'StackOverflow-style questions with on-chain tips, XP, and badges for helpful answers.',
   },
   {
     icon: ArrowLeftRight,
@@ -49,9 +63,19 @@ const WEB3_FEATURES = [
     desc: 'Send crypto to a username, split bills, and swap tokens at best-rate — without leaving the app.',
   },
   {
+    icon: Award,
+    title: 'Course Creator Studio',
+    desc: 'Upload courses as a verified builder, earn 70% tuition share + Creator badge + Builder Score.',
+  },
+  {
     icon: GraduationCap,
     title: 'Mentorship Marketplace',
     desc: 'Book top builders for sessions paid in W3T, rated and rewarded by the community.',
+  },
+  {
+    icon: Landmark,
+    title: 'Verified Talent Hire Network',
+    desc: 'Hire pre-vetted developers. Check Builder Score, on-chain portfolio, escrow-protected contracts.',
   },
   {
     icon: Brain,
@@ -62,14 +86,24 @@ const WEB3_FEATURES = [
 
 const AI_FEATURES = [
   {
-    icon: Brain,
-    title: 'AI Intelligence Feed',
-    desc: 'A personalized stream of model launches, research papers, and funding rounds across every major lab.',
-  },
-  {
     icon: Fingerprint,
     title: 'AI Builder Identity',
     desc: 'A verifiable profile of your models, datasets, benchmarks, and shipped agents — provably yours.',
+  },
+  {
+    icon: BookOpen,
+    title: 'Learn · Courses & Badges',
+    desc: 'From transformers to agent engineering. Complete courses, mint NFTs, boost your Builder Score.',
+  },
+  {
+    icon: Wallet,
+    title: 'Fiat & Crypto Payments',
+    desc: 'INR deposits via UPI/NEFT/RTGS, P2P crypto by username, compute bounties, escrow & splits.',
+  },
+  {
+    icon: Brain,
+    title: 'AI Intelligence Feed',
+    desc: 'A personalized stream of model launches, research papers, and funding rounds across every major lab.',
   },
   {
     icon: Bot,
@@ -87,9 +121,19 @@ const AI_FEATURES = [
     desc: 'Daily AI-summarized digests of arXiv papers and lab blogs, tuned to the topics you follow.',
   },
   {
+    icon: Trophy,
+    title: 'Builder Score · XP · Reputation',
+    desc: 'Earn XP for answers, code reviews, papers, shipped agents, and verified client work.',
+  },
+  {
     icon: MessagesSquare,
-    title: 'Q&A Forum',
+    title: 'Q&A Forum with Bounties',
     desc: 'Ask ML and engineering questions, earn reputation, and get answers from verified practitioners.',
+  },
+  {
+    icon: Award,
+    title: 'Course Creator Studio',
+    desc: 'Publish courses. 70% tuition in W3T, creator NFT badge, +12 Builder Score per course.',
   },
   {
     icon: Cpu,
@@ -105,15 +149,15 @@ const AI_FEATURES = [
 
 const COPY = {
   web3: {
-    eyebrow: 'Core platform',
-    title: 'Everything a Web3 professional needs, in one place',
-    body: 'No more scattering across Twitter, Discord, Telegram, and GitHub. Web3Sphere unifies your identity, network, and money.',
+    eyebrow: 'The platform · 12 modules',
+    title: 'Identity, Learn, Earn, Work, Pay — all on-chain',
+    body: 'Everything Web3 professionals need across a decade of career growth. Learn, build, get paid, hire talent, mentor, and move fiat + crypto — with one verified identity.',
     features: WEB3_FEATURES,
   },
   ai: {
-    eyebrow: 'Core platform',
-    title: 'Everything an AI builder needs, in one place',
-    body: 'From research to shipped agents, Web3Sphere unifies your AI identity, knowledge feed, and professional network — no more scattering across a dozen tools.',
+    eyebrow: 'The platform · 12 modules',
+    title: 'Identity, Learn, Earn, Work, Compute — all verifiable',
+    body: 'From research to shipped agents. Build your AI portfolio, find compute, get hired, mentor, learn — with reputation you own and take anywhere.',
     features: AI_FEATURES,
   },
 } as const
