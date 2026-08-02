@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import { ModeProvider } from '@/components/mode-provider'
+import { WalletProvider } from '@/context/wallet-provider'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -36,7 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`bg-background ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
       <body className="font-sans antialiased">
-        <ModeProvider>{children}</ModeProvider>
+        <ModeProvider>
+          <WalletProvider>
+            {children}
+          </WalletProvider>
+        </ModeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

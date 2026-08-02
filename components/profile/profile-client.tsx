@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 import { NetworkCanvas } from '@/components/network-canvas'
+import { LinkedWalletsPanel } from '@/components/wallet/linked-wallets-panel'
 import { cn } from '@/lib/utils'
 
 const PROFILE = {
@@ -337,6 +338,11 @@ export function ProfileClient() {
             })}
           </div>
         </section>
+        {/* Linked Wallets Section */}
+        <section className="mt-10">
+          <LinkedWalletsPanel />
+        </section>
+
       </div>
     </div>
   )

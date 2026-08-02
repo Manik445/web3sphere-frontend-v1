@@ -1,57 +1,38 @@
 'use client'
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
+/**
+ * Mode Provider (simplified — permanently locked to Web3 track)
+ * ─────────────────────────────────────────────────────────────────────────────
+ * The AI / Web3 toggle has been removed from the header. The default track is
+ * Web3 and there is no user-facing switch. Keep the provider in place so all
+ * components that import `useMode()` continue to work without refactor churn.
+ * They will always receive `mode === 'web3'`.
+ */
+
+import { createContext, useCallback, useContext, useMemo } from 'react'
 
 export type SphereMode = 'web3' | 'ai'
-
-const STORAGE_KEY = 'web3sphere:mode'
 
 type ModeContextValue = {
   mode: SphereMode
   setMode: (mode: SphereMode) => void
   toggleMode: () => void
-  /** true once the persisted preference has been read on the client */
   ready: boolean
 }
 
 const ModeContext = createContext<ModeContextValue | null>(null)
 
 export function ModeProvider({ children }: { children: React.ReactNode }) {
-  const [mode, setModeState] = useState<SphereMode>('web3')
-  const [ready, setReady] = useState(false)
+  /** Always Web3. No localStorage, no state toggles. */
+  const mode: SphereMode = 'web3'
+  const ready = true
 
-  // Restore the saved track on mount so the choice persists for future visits.
-  useEffect(() => {
-    try {
-      const saved = window.localStorage.getItem(STORAGE_KEY)
-      if (saved === 'web3' || saved === 'ai') {
-        setModeState(saved)
-      }
-    } catch {
-      // ignore storage access errors (e.g. private mode)
-    }
-    setReady(true)
-  }, [])
-
-  const setMode = useCallback((next: SphereMode) => {
-    setModeState(next)
-    try {
-      window.localStorage.setItem(STORAGE_KEY, next)
-    } catch {
-      // ignore
-    }
+  const setMode = useCallback((_next: SphereMode) => {
+    /** no-op: track is permanently web3 */
   }, [])
 
   const toggleMode = useCallback(() => {
-    setModeState((prev) => {
-      const next = prev === 'web3' ? 'ai' : 'web3'
-      try {
-        window.localStorage.setItem(STORAGE_KEY, next)
-      } catch {
-        // ignore
-      }
-      return next
-    })
+    /** no-op: track is permanently web3 */
   }, [])
 
   const value = useMemo(

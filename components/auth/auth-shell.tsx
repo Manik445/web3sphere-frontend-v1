@@ -1,5 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import { Logo } from '@/components/logo'
+import { WalletConnectButton } from '@/components/wallet/wallet-connect-button'
+import { useAppKit } from '@reown/appkit/react'
 
 export function AuthShell({ children }: { children: React.ReactNode }) {
   return (
@@ -48,26 +52,35 @@ export function OrDivider({ label }: { label: string }) {
   )
 }
 
+/**
+ * WalletButtons — replaced with real AppKit-powered connect button.
+ * Clicking opens the WalletConnect modal; on connect the auth flow
+ * (challenge → sign → login) runs automatically.
+ */
 export function WalletButtons() {
-  const wallets = [
-    { name: 'MetaMask', short: 'MM' },
-    { name: 'WalletConnect', short: 'WC' },
-    { name: 'Coinbase', short: 'CB' },
-  ]
   return (
-    <div className="grid grid-cols-3 gap-3">
-      {wallets.map((w) => (
-        <button
-          key={w.name}
-          type="button"
-          className="flex h-14 flex-col items-center justify-center gap-1 rounded-xl border border-border bg-secondary/40 text-foreground transition-all hover:border-primary/50 hover:bg-secondary"
-          aria-label={`Connect with ${w.name}`}
-        >
-          <span className="font-mono text-sm font-bold">{w.short}</span>
-          <span className="text-[10px] text-muted-foreground">{w.name}</span>
-        </button>
-      ))}
+    <div className="flex flex-col gap-3">
+      <WalletConnectButton
+        className="h-12 w-full rounded-xl text-sm"
+        variant="outline"
+      />
+      <OpenModalButton />
     </div>
+  )
+}
+
+/** Secondary button that opens the AppKit modal directly */
+function OpenModalButton() {
+  const { open } = useAppKit()
+  return (
+    <button
+      type="button"
+      onClick={() => open({ view: 'Networks' })}
+      className="flex items-center justify-center gap-2 rounded-xl border border-dashed border-border py-2.5 text-xs text-muted-foreground transition-all hover:border-primary/40 hover:text-primary"
+      aria-label="Browse all wallets and networks"
+    >
+      <span className="font-mono">Browse all wallets & networks</span>
+    </button>
   )
 }
 

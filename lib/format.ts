@@ -25,4 +25,33 @@ export function formatPct(value: number): string {
   return `${sign}${value.toFixed(2)}%`
 }
 
-export const fetcher = (url: string) => fetch(url).then((r) => r.json())
+/**
+ * Safe SWR fetcher.
+ * - Absorbs network / TypeError ("Failed to fetch") so console stays clean.
+ * - Handles responses that are not `ok` without throwing a generic TypeError.
+ * - Returns `null` on failure — SWR will fall back to initialData (typically
+ *   an empty array / mock) and the component won't see a crashing error.
+ */
+export async function fetcher<T = any>(url: string, init?: RequestInit): Promise<T | null> {
+  try {
+    const controller =
+      typeof AbortController !== 'undefined' ? new AbortController() : undefined
+    const timeoutId = controller
+      ? setTimeout(() => controller.abort(), 8000)
+      : undefined
+    try {
+      const r = await fetch(url, { ...init, signal: controller?.signal })
+      if (timeoutId) clearTimeout(timeoutId)
+      if (!r.ok) return null
+      const ct = r.headers.get('content-type') || ''
+      if (!ct.includes('application/json')) return null as any
+      const json = await r.json()
+      return json as T
+    } finally {
+      if (timeoutId) clearTimeout(timeoutId)
+    }
+  } catch {
+    /** TypeError: Failed to fetch (offline, CORS, abort, unreachable backend). */
+    return null
+  }
+}
